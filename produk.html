@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produk - Warung Kembar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">
+        🍃 Warung <span>Kembar</span>
+        <small>Jajanan Lezat, Minuman Segar, Harga Bersahabat</small>
+    </div>
+
+    <nav>
+        <a href="index.html">Beranda</a>
+        <a href="produk.html" class="active">Produk</a>
+        <a href="galeri.html">Galeri</a>
+        <a href="tentang.html">Tentang</a>
+    </nav>
+
+    <div class="search">🔍</div>
+</header>
+
+<section class="menu-section product-page">
+
+    <div class="section-title">
+        <span>🌿</span>
+        <h2>Menu Warung Kembar</h2>
+        <span>🌿</span>
+    </div>
+
+    <p class="subtitle">
+        Pilihan jajanan dan minuman favorit dengan harga bersahabat.
+    </p>
+
+    <!-- PENCARIAN PRODUK -->
+    <div class="product-search">
+        <span>🔍</span>
+        <input
+            type="search"
+            id="searchProduct"
+            placeholder="Cari makanan atau minuman..."
+            aria-label="Cari makanan atau minuman"
+        >
+    </div>
+
+    <!-- DAFTAR PRODUK -->
+    <div class="all-products">
+
+        <!-- LUMPIA -->
+        <div class="product-category" data-search="lumpia ubi ungu original coklat keju mix">
+            <div class="product-card">
+                <img src="images/lumpia ubi.jpeg" alt="Lumpia Ubi Ungu">
+
+                <div class="product-info">
+                    <h3>🥟 Lumpia Ubi Ungu</h3>
+                    <p>
+                        Original — Rp5.000<br>
+                        Coklat / Keju — Rp5.000<br>
+                        Mix — Rp6.000
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- BAKSO -->
+        <div class="product-category" data-search="bakso mercon hemat biasa jumbo">
+            <div class="product-card">
+                <img src="images/bakso mercon.jpeg" alt="Bakso Mercon">
+
+                <div class="product-info">
+                    <h3>🌶️ Bakso Mercon</h3>
+                    <p>
+                        Hemat — Rp3.000<br>
+                        Biasa — Rp5.000<br>
+                        Jumbo — Rp10.000
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- BOLA UBI -->
+        <div class="product-category" data-search="bola ubi original coklat keju mix">
+            <div class="product-card">
+                <img src="images/bola ubi.jpeg" alt="Bola Ubi">
+
+                <div class="product-info">
+                    <h3>🟣 Bola Ubi</h3>
+                    <p>
+                        Original — Rp5.000<br>
+                        Coklat / Keju — Rp5.000<br>
+                        Mix — Rp6.000
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- SOSIS -->
+        <div class="product-category" data-search="aneka sosis goreng serba 2k dapat 3">
+            <div class="product-card">
+                <img src="images/aneka sosis goreng.jpeg" alt="Aneka Sosis Goreng">
+
+                <div class="product-info">
+                    <h3>🌭 Aneka Sosis Goreng</h3>
+                    <p>
+                        Serba 2K<br>
+                        Dapat 3
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- MINUMAN -->
+        <div class="product-category drink-category"
+             data-search="minuman es teh jumbo cappucino cincau sticky milk">
+
+            <div class="product-card">
+                <img src="images/minuman.jpeg" alt="Aneka Minuman Warung Kembar">
+
+                <div class="product-info">
+                    <h3>🥤 Minuman</h3>
+                    <p>
+                        Es Teh Jumbo — Rp3.000<br>
+                        Cappucino Cincau — Rp5.000<br>
+                        Sticky Milk — Rp5.000
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <p id="noProducts" class="no-products" hidden>
+        Produk tidak ditemukan.
+    </p>
+
+    <!-- TOMBOL HANYA DI BAGIAN BAWAH -->
+    <div class="product-buttons">
+        <a href="index.html" class="next-button">
+            ← Kembali ke Beranda
+        </a>
+
+        <a href="galeri.html" class="next-button">
+            Lihat Galeri →
+        </a>
+    </div>
+
+</section>
+
+<footer>
+    <div class="footer-decoration">🍃</div>
+    <h2>💛 Terima Kasih 💛</h2>
+    <p>Sudah Mendukung Warung Kembar</p>
+</footer>
+
+<script>
+    const searchInput = document.getElementById("searchProduct");
+    const products = document.querySelectorAll(".product-category");
+    const noProducts = document.getElementById("noProducts");
+
+    searchInput.addEventListener("input", function () {
+        const keyword = this.value.toLowerCase().trim();
+        let visibleCount = 0;
+
+        products.forEach(function (product) {
+            const searchableText =
+                product.innerText + " " + product.dataset.search;
+
+            const match = searchableText.toLowerCase().includes(keyword);
+
+            product.style.display = match ? "" : "none";
+
+            if (match) visibleCount++;
+        });
+
+        noProducts.hidden = visibleCount !== 0;
+    });
+</script>
+
+</body>
+</html>

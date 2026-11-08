@@ -1,0 +1,1530 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Patrick+Hand&display=swap');
+
+
+/* =========================
+   DASAR
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Baloo 2', cursive;
+    background: #f3f0d9;
+    color: #194d35;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+header {
+    height: 90px;
+    padding: 0 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: #0c4b31;
+
+    position: relative;
+    z-index: 10;
+
+    box-shadow: 0 4px 15px rgba(0,0,0,0.12);
+}
+
+
+/* LOGO */
+
+.logo {
+    color: white;
+    font-size: 27px;
+    font-weight: 800;
+    line-height: 1;
+    position: relative;
+}
+
+.logo span {
+    color: #ffd22e;
+}
+
+.logo small {
+    display: block;
+    font-family: 'Patrick Hand', cursive;
+    font-size: 13px;
+    font-weight: 400;
+    color: #e9efd8;
+    margin-top: 5px;
+    letter-spacing: .3px;
+}
+
+
+/* NAVIGASI */
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+}
+
+nav a {
+    position: relative;
+
+    color: white;
+    text-decoration: none;
+
+    font-size: 18px;
+    font-weight: 600;
+
+    transition: .3s;
+}
+
+nav a:hover,
+nav a.active {
+    color: #ffd22e;
+}
+
+
+/* GARIS AKTIF */
+
+nav a.active::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: -12px;
+
+    height: 4px;
+
+    background: #ffd22e;
+
+    border-radius: 10px;
+}
+
+
+/* SEARCH */
+
+.search {
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #15583a;
+
+    color: #ffd22e;
+
+    border-radius: 50%;
+
+    font-size: 21px;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+
+    min-height: 570px;
+
+    padding: 65px 6% 55px;
+
+    display: grid;
+
+    grid-template-columns: 45% 55%;
+
+    align-items: center;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(circle at 10% 20%,
+        rgba(255,255,255,.16) 0 3px,
+        transparent 4px),
+
+        radial-gradient(circle at 80% 30%,
+        rgba(255,255,255,.10) 0 4px,
+        transparent 5px),
+
+        linear-gradient(
+            120deg,
+            #0d5134 0%,
+            #28734d 45%,
+            #6e9d6a 100%
+        );
+}
+
+
+/* ornamen background */
+
+.hero::before {
+    content: "";
+
+    position: absolute;
+
+    width: 420px;
+    height: 420px;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,.06);
+
+    left: -180px;
+    top: 60px;
+}
+
+.hero::after {
+    content: "✦   ❋   ✦";
+
+    position: absolute;
+
+    right: 35px;
+    top: 35px;
+
+    color: rgba(255,220,50,.25);
+
+    font-size: 35px;
+
+    transform: rotate(-10deg);
+}
+
+
+/* =========================
+   TEKS HERO
+========================= */
+
+.hero-text {
+    position: relative;
+    z-index: 2;
+
+    padding-left: 25px;
+}
+
+
+.label {
+    display: inline-block;
+
+    padding: 9px 20px;
+
+    margin-bottom: 22px;
+
+    background: #ffd329;
+
+    color: #164c34;
+
+    border-radius: 30px;
+
+    font-size: 16px;
+    font-weight: 700;
+
+    box-shadow: 0 6px 15px rgba(0,0,0,.12);
+}
+
+
+/* JUDUL */
+
+.hero h1 {
+    font-family: 'Patrick Hand', cursive;
+
+    font-size: clamp(48px, 5vw, 76px);
+
+    line-height: .95;
+
+    color: white;
+
+    font-weight: 400;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 20px;
+}
+
+
+.hero h1 span {
+    color: #ffd22e;
+
+    text-shadow:
+        2px 2px 0 #174e35;
+}
+
+
+/* SUB JUDUL */
+
+.hero h2 {
+    font-family: 'Patrick Hand', cursive;
+
+    font-size: 29px;
+
+    line-height: 1.1;
+
+    color: white;
+
+    font-weight: 400;
+
+    margin-bottom: 18px;
+}
+
+
+/* DESKRIPSI */
+
+.hero p {
+    max-width: 470px;
+
+    color: #f4f5e8;
+
+    font-size: 17px;
+
+    line-height: 1.6;
+
+    margin-bottom: 28px;
+}
+
+
+/* BUTTON */
+
+.btn {
+    display: inline-block;
+
+    padding: 13px 25px;
+
+    background: #ffd329;
+
+    color: #174c34;
+
+    text-decoration: none;
+
+    border-radius: 30px;
+
+    font-size: 17px;
+
+    font-weight: 700;
+
+    box-shadow: 0 7px 15px rgba(0,0,0,.18);
+
+    transition: .3s;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+
+    background: #ffe45d;
+}
+
+
+/* =========================
+   FOTO HERO
+========================= */
+
+.hero-image {
+
+    position: relative;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    z-index: 2;
+
+    padding: 20px;
+}
+
+
+.hero-image img {
+
+    width: 88%;
+
+    max-width: 610px;
+
+    height: 380px;
+
+    object-fit: cover;
+
+    border-radius: 28px;
+
+    border: 6px solid rgba(255,255,255,.85);
+
+    box-shadow:
+        0 18px 35px rgba(0,0,0,.25);
+
+    transform: rotate(1deg);
+
+    transition: .4s;
+}
+
+.hero-image img:hover {
+    transform: rotate(0deg) scale(1.02);
+}
+
+
+/* =========================
+   BADGE TERIMA KASIH
+========================= */
+
+.thank-badge {
+
+    position: absolute;
+
+    right: 2%;
+    bottom: 10px;
+
+    width: 125px;
+    height: 125px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 12px;
+
+    background: #ffd329;
+
+    color: #174c34;
+
+    border-radius: 50%;
+
+    font-family: 'Patrick Hand', cursive;
+
+    font-size: 16px;
+
+    line-height: 1.05;
+
+    transform: rotate(8deg);
+
+    box-shadow: 0 8px 18px rgba(0,0,0,.18);
+}
+
+.thank-badge b {
+    font-size: 20px;
+}
+
+
+/* =========================
+   KEUNGGULAN
+========================= */
+
+.features {
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+
+    padding: 28px 7%;
+
+    background: #15583a;
+
+    color: white;
+}
+
+
+.feature {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+}
+
+
+.feature-icon {
+
+    width: 50px;
+    height: 50px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #ffd329;
+
+    color: #174c34;
+
+    border-radius: 50%;
+
+    font-size: 22px;
+}
+
+
+.feature h3 {
+    font-size: 18px;
+
+    color: #ffd329;
+
+    margin-bottom: 2px;
+}
+
+
+.feature p {
+    font-family: 'Patrick Hand', cursive;
+
+    color: #e6eadc;
+
+    font-size: 15px;
+
+    line-height: 1.1;
+}
+
+
+/* =========================
+   MENU KAMI
+========================= */
+
+.menu-section {
+
+    position: relative;
+
+    padding: 65px 5% 75px;
+
+    overflow: hidden;
+
+    background:
+
+        radial-gradient(
+            circle at 5% 20%,
+            rgba(53,111,72,.10) 0 3px,
+            transparent 4px
+        ),
+
+        radial-gradient(
+            circle at 95% 70%,
+            rgba(53,111,72,.10) 0 4px,
+            transparent 5px
+        ),
+
+        #edf2d5;
+}
+
+
+/* ORNAMEN */
+
+.menu-section::before {
+    content: "✦  ❋  ✦";
+
+    position: absolute;
+
+    top: 25px;
+    left: 40px;
+
+    color: #b7c99a;
+
+    font-size: 30px;
+
+    transform: rotate(-12deg);
+}
+
+.menu-section::after {
+    content: "❋  ✦";
+
+    position: absolute;
+
+    bottom: 25px;
+    right: 40px;
+
+    color: #b7c99a;
+
+    font-size: 30px;
+
+    transform: rotate(12deg);
+}
+
+
+/* JUDUL MENU */
+
+.section-title {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 5px;
+}
+
+
+.section-title h2 {
+
+    font-family: 'Patrick Hand', cursive;
+
+    font-size: 47px;
+
+    color: #17603d;
+
+    font-weight: 400;
+}
+
+
+.section-title span {
+
+    color: #f2c91f;
+
+    font-size: 27px;
+}
+
+
+/* SUBTITLE */
+
+.subtitle {
+
+    text-align: center;
+
+    font-family: 'Patrick Hand', cursive;
+
+    font-size: 20px;
+
+    color: #356249;
+
+    margin-bottom: 35px;
+}
+
+
+/* =========================
+   KARTU MENU
+========================= */
+
+.menu-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(5, 1fr);
+
+    gap: 18px;
+
+    max-width: 1250px;
+
+    margin: auto;
+}
+
+
+.menu-card {
+
+    overflow: hidden;
+
+    background: white;
+
+    border-radius: 22px;
+
+    border: 4px solid white;
+
+    box-shadow:
+        0 9px 20px rgba(26,73,48,.18);
+
+    transition: .3s;
+}
+
+
+.menu-card:hover {
+
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 15px 28px rgba(26,73,48,.25);
+}
+
+
+/* FOTO PRODUK */
+
+.menu-photo {
+
+    width: 100%;
+
+    height: 175px;
+
+    overflow: hidden;
+
+    background: #dce8ca;
+}
+
+
+.menu-photo img {
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: .4s;
+}
+
+
+.menu-card:hover .menu-photo img {
+
+    transform: scale(1.06);
+}
+
+
+/* NAMA MENU */
+
+.menu-name {
+
+    min-height: 55px;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 8px 12px;
+
+    background: #167044;
+
+    color: white;
+
+    font-size: 17px;
+
+    font-weight: 700;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+
+    position: relative;
+
+    text-align: center;
+
+    padding: 45px 20px 50px;
+
+    background: #0b4b30;
+
+    color: white;
+
+    overflow: hidden;
+}
+
+
+footer::before {
+    content: "❋       ♡       ❋";
+
+    position: absolute;
+
+    top: 8px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    color: #ffd329;
+
+    font-size: 25px;
+}
+
+
+footer h2 {
+
+    font-family: 'Patrick Hand', cursive;
+
+    color: #ffd329;
+
+    font-size: 40px;
+
+    font-weight: 400;
+
+    margin-bottom: 5px;
+}
+
+
+footer p {
+
+    font-family: 'Patrick Hand', cursive;
+
+    font-size: 19px;
+
+    color: #edf2d5;
+}
+
+
+.footer-decoration {
+
+    position: absolute;
+
+    left: 30px;
+    bottom: 10px;
+
+    font-size: 45px;
+
+    color: #a8c76d;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1000px) {
+
+    header {
+        padding: 0 4%;
+    }
+
+    nav {
+        gap: 20px;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .hero-text {
+        padding-left: 0;
+    }
+
+    .hero p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-image {
+        margin-top: 25px;
+    }
+
+    .hero-image img {
+        width: 75%;
+        height: 330px;
+    }
+
+    .features {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .menu-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+
+@media (max-width: 700px) {
+
+    header {
+        height: auto;
+        padding: 18px;
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    nav {
+        gap: 18px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .search {
+        display: none;
+    }
+
+    .hero {
+        padding: 45px 20px;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .hero h2 {
+        font-size: 25px;
+    }
+
+    .hero-image img {
+        width: 95%;
+        height: 280px;
+    }
+
+    .thank-badge {
+        width: 95px;
+        height: 95px;
+        font-size: 12px;
+    }
+
+    .thank-badge b {
+        font-size: 15px;
+    }
+
+    .features {
+        grid-template-columns: 1fr;
+    }
+
+    .menu-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .section-title h2 {
+        font-size: 38px;
+    }
+}
+
+
+@media (max-width: 450px) {
+
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .menu-photo {
+        height: 220px;
+    }
+}
+
+/* =========================
+   SUSUNAN PRODUK
+========================= */
+
+.all-products {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.all-products .product-category {
+    width: 100%;
+    margin: 0;
+}
+
+.all-products .product-category h3 {
+    color: #4f7955;
+    font-size: 21px;
+    margin-bottom: 12px;
+    padding: 9px 12px;
+    background: #edf4e3;
+    border-radius: 14px;
+}
+
+.all-products .product-card {
+    width: 100%;
+    background: #fffdf5;
+    border: 1px solid #dce8cf;
+    border-radius: 22px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 7px 20px rgba(70, 100, 70, 0.10);
+}
+
+.all-products .product-card img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    display: block;
+}
+
+.all-products .product-card h4 {
+    margin: 16px 10px 3px;
+    color: #4f7955;
+    font-size: 19px;
+}
+
+.all-products .product-card p {
+    margin: 0 10px 18px;
+    color: #6b8568;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+
+/* MINUMAN DI TENGAH */
+.all-products .product-category:nth-child(5) {
+    grid-column: 1 / 3;
+    width: 50%;
+    justify-self: center;
+}
+
+
+/* TAMPILAN HP */
+@media (max-width: 650px) {
+
+    .all-products {
+        grid-template-columns: 1fr;
+        width: 92%;
+    }
+
+    .all-products .product-category:nth-child(5) {
+        grid-column: auto;
+        width: 100%;
+    }
+
+}
+.all-products .product-category:nth-child(3) .product-card,
+.all-products .product-category:nth-child(4) .product-card {
+    height: 350px;
+}
+
+.all-products .product-category:nth-child(3) .product-card img,
+.all-products .product-category:nth-child(4) .product-card img {
+    height: 240px;
+}
+/* =========================
+   MENYAMAKAN UKURAN KARTU
+========================= */
+
+.all-products .product-card {
+    min-height: 350px;
+}
+
+.all-products .product-card img {
+    height: 240px;
+    object-fit: cover;
+}
+
+.all-products .product-card h4 {
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.all-products .product-card p {
+    line-height: 1.6;
+}
+/* =========================
+   MERAPIKAN JARAK PRODUK
+========================= */
+
+.all-products {
+    row-gap: 40px;
+    column-gap: 30px;
+}
+
+.all-products .product-category h3 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.all-products .product-card {
+    margin: 0;
+}
+/* =========================
+   GALERI WARUNG KEMBAR
+========================= */
+
+.gallery-grid {
+    width: 90%;
+    max-width: 1100px;
+    margin: 35px auto 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.gallery-item {
+    background: #fffdf5;
+    padding: 8px;
+    border-radius: 22px;
+    box-shadow: 0 7px 20px rgba(70, 100, 70, 0.12);
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 230px;
+    display: block;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+
+/* TABLET */
+@media (max-width: 850px) {
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* HP */
+@media (max-width: 550px) {
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        width: 92%;
+    }
+
+    .gallery-item img {
+        height: 250px;
+    }
+
+}
+/* =========================
+   HALAMAN TENTANG
+========================= */
+
+.about-content {
+    width: 90%;
+    max-width: 1050px;
+    margin: 40px auto 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 45px;
+    align-items: center;
+}
+
+.about-image {
+    background: #fffdf5;
+    padding: 10px;
+    border-radius: 25px;
+    box-shadow: 0 8px 22px rgba(70, 100, 70, 0.12);
+}
+
+.about-image img {
+    width: 100%;
+    height: 350px;
+    display: block;
+    object-fit: cover;
+    border-radius: 18px;
+}
+
+.about-text {
+    background: #fffdf5;
+    padding: 30px;
+    border-radius: 25px;
+    box-shadow: 0 8px 22px rgba(70, 100, 70, 0.10);
+}
+
+.about-text h3 {
+    color: #4f7955;
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.about-text > p {
+    color: #5f755f;
+    font-size: 17px;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.about-info {
+    margin-top: 25px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.about-info div {
+    background: #edf4e3;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+.about-info strong {
+    color: #4f7955;
+    font-size: 17px;
+}
+
+.about-info p {
+    color: #6b8568;
+    margin-top: 5px;
+}
+
+
+/* TABLET */
+@media (max-width: 800px) {
+
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .about-image img {
+        height: 320px;
+    }
+
+}
+
+
+/* HP */
+@media (max-width: 550px) {
+
+    .about-content {
+        width: 92%;
+    }
+
+    .about-image img {
+        height: 260px;
+    }
+
+    .about-text {
+        padding: 22px;
+    }
+
+    .about-info {
+        grid-template-columns: 1fr;
+    }
+
+}
+.next-page {
+    text-align: center;
+    margin: 40px 0 10px;
+}
+
+.next-button {
+    display: inline-block;
+    padding: 13px 28px;
+    background: #4f7955;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.next-button:hover {
+    background: #6b956c;
+    transform: translateY(-2px);
+}
+/* =================================
+   PERBAIKAN HALAMAN PRODUK
+================================= */
+
+.product-page {
+    padding: 45px 5% 35px;
+}
+
+/* Pencarian di tengah */
+.product-search {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: min(450px, 90%);
+    margin: 0 auto 30px;
+    padding: 10px 18px;
+    background: #fff;
+    border: 2px solid #168253;
+    border-radius: 30px;
+    box-shadow: 0 4px 10px rgba(25, 77, 53, 0.08);
+}
+
+.product-search span {
+    font-size: 19px;
+}
+
+.product-search input {
+    width: 100%;
+    min-width: 0;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #194d35;
+    font-family: 'Baloo 2', cursive;
+    font-size: 16px;
+}
+
+.product-search input::placeholder {
+    color: #71917c;
+}
+
+/* Dua kolom produk */
+.product-page .all-products {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    gap: 20px;
+    align-items: stretch;
+}
+
+/* Kategori */
+.product-page .product-category {
+    width: 100%;
+    min-width: 0;
+    margin: 0;
+}
+
+/* Kartu dengan gambar kiri dan tulisan kanan */
+.product-page .product-card {
+    display: grid;
+    grid-template-columns: 40% minmax(0, 1fr);
+    align-items: center;
+    gap: 18px;
+    width: 100%;
+    height: 100%;
+    min-height: 180px;
+    padding: 16px;
+    background: #fffdf2;
+    border: 1px solid #e0e8ce;
+    border-radius: 20px;
+    overflow: hidden;
+    text-align: left;
+    box-shadow: 0 6px 16px rgba(40, 80, 45, 0.10);
+    transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.product-page .product-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 22px rgba(40, 80, 45, 0.15);
+}
+
+/* Gambar */
+.product-page .product-card img {
+    display: block;
+    grid-column: 1;
+    width: 100%;
+    height: 145px;
+    margin: 0;
+    border-radius: 13px;
+    object-fit: cover;
+}
+
+/* Tulisan di sebelah kanan */
+.product-page .product-info {
+    min-width: 0;
+    grid-column: 2;
+}
+
+.product-page .product-info h3 {
+    margin: 0 0 10px;
+    padding: 8px 10px;
+    background: #e8edc9;
+    border-radius: 25px;
+    color: #17603d;
+    font-size: 18px;
+    line-height: 1.3;
+    text-align: center;
+}
+
+.product-page .product-info p {
+    margin: 0;
+    color: #356249;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.8;
+    overflow-wrap: break-word;
+}
+
+/* Minuman di tengah, ukurannya lebih besar */
+.product-page .drink-category {
+    grid-column: 1 / -1;
+    width: 68%;
+    justify-self: center;
+}
+
+.product-page .drink-category .product-card {
+    grid-template-columns: 42% minmax(0, 1fr);
+    min-height: 210px;
+    padding: 18px;
+}
+
+.product-page .drink-category .product-card img {
+    height: 170px;
+}
+
+.product-page .drink-category .product-info h3 {
+    font-size: 25px;
+    margin-bottom: 12px;
+}
+
+.product-page .drink-category .product-info p {
+    font-size: 18px;
+    line-height: 1.9;
+}
+
+/* Tombol bawah berdampingan */
+.product-page .product-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 18px;
+    margin: 22px auto 0;
+}
+
+.product-page .product-buttons .next-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 190px;
+    padding: 13px 24px;
+    background: #08794c;
+    color: white;
+    border-radius: 30px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background 0.25s, transform 0.25s;
+}
+
+.product-page .product-buttons .next-button:hover {
+    background: #0c5838;
+    transform: translateY(-2px);
+}
+
+/* Pesan jika produk tidak ditemukan */
+.product-page .no-products {
+    margin: 20px auto;
+    color: #356249;
+    text-align: center;
+    font-size: 17px;
+}
+
+/* Tablet dan HP */
+@media (max-width: 700px) {
+    .product-page {
+        padding: 35px 4% 30px;
+    }
+
+    .product-page .all-products {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .product-page .drink-category {
+        grid-column: auto;
+        width: 100%;
+    }
+
+    .product-page .product-card {
+        grid-template-columns: 38% minmax(0, 1fr);
+        gap: 12px;
+        min-height: 155px;
+        padding: 12px;
+    }
+
+    .product-page .product-card img {
+        height: 125px;
+    }
+
+    .product-page .product-info h3 {
+        font-size: 16px;
+    }
+
+    .product-page .product-info p {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .product-page .drink-category .product-card {
+        grid-template-columns: 38% minmax(0, 1fr);
+        min-height: 175px;
+    }
+
+    .product-page .drink-category .product-card img {
+        height: 145px;
+    }
+
+    .product-page .drink-category .product-info h3 {
+        font-size: 20px;
+    }
+
+    .product-page .drink-category .product-info p {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    .product-page .product-buttons {
+        gap: 12px;
+    }
+
+    .product-page .product-buttons .next-button {
+        min-width: 0;
+        padding: 12px 17px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 380px) {
+    .product-page .product-card {
+        grid-template-columns: 34% minmax(0, 1fr);
+        gap: 9px;
+        padding: 9px;
+    }
+
+    .product-page .product-card img {
+        height: 110px;
+    }
+
+    .product-page .product-info h3 {
+        font-size: 14px;
+        padding: 7px 5px;
+    }
+
+    .product-page .product-info p {
+        font-size: 12px;
+    }
+
+    .product-page .product-buttons .next-button {
+        padding: 10px 12px;
+        font-size: 12px;
+    }
+}
+/* MENYAMAKAN UKURAN 4 KOTAK JAJANAN */
+.product-page .all-products {
+    grid-auto-rows: 1fr;
+}
+
+.product-page .all-products > .product-category:not(.drink-category) {
+    height: 100%;
+    min-width: 0;
+}
+
+.product-page .all-products > .product-category:not(.drink-category) .product-card {
+    width: 100%;
+    height: 100%;
+    min-height: 200px;
+    grid-template-columns: 40% minmax(0, 1fr);
+    align-items: center;
+}
+
+.product-page .all-products > .product-category:not(.drink-category) .product-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+/* MINUMAN TETAP BERUKURAN LEBIH BESAR */
+.product-page .all-products > .drink-category {
+    height: auto;
+}
+
+.product-page .all-products > .drink-category .product-card {
+    height: auto;
+    min-height: 210px;
+}
+/* TOMBOL GALERI DI TENGAH */
+.product-page .product-buttons,
+.menu-section .product-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    margin: 25px auto 0;
+}
